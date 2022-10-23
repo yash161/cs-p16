@@ -1,0 +1,13 @@
+apiVersion: portieris.cloud.ibm.com/v1
+kind:  ImagePolicy
+metadata:
+  name: signedby-yash1
+spec:
+  repositories:
+  - name: "uk.icr.io/yash1/*"
+    policy:
+        simple:
+          requirements:
+          - type: "signedBy"
+            keySecret: port-pubkey
+ 
